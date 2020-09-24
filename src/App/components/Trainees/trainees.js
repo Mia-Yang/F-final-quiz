@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import './list.scss';
+import { Popover } from 'antd';
+import './trainees.scss';
+import 'antd/dist/antd.css'
 
-class List extends Component {
+class Trainees extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +13,7 @@ class List extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8080/list', { method: 'GET'})
+    fetch('http://localhost:8080/trainees?grouped=false', { method: 'GET'})
       .then((res) => {
         return res.json();
       })
@@ -31,7 +33,7 @@ class List extends Component {
 
   handleAddPerson = (e) => {
     if (e.keyCode === 13) {
-      fetch('http://localhost:8080/list', { 
+      fetch('http://localhost:8080/trainees', { 
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: this.state.inputName
@@ -57,9 +59,12 @@ class List extends Component {
         <h1>学员列表</h1>
         <div className='list'>
           {this.state.students.map((person) => 
-          <div className='personCard' key={person.id}>
-            {person.id}.{person.name}
-          </div>
+            <Popover content={person.name} trigger="hover" key={person.id}>
+                <div className='personCard'>
+                  {person.id}.{person.name}
+                </div>
+            </Popover>
+          
           )}
           <input type="text" placeholder="+添加学员"  onKeyDown={this.handleAddPerson} 
           onChange={this.handleChange} />
@@ -69,4 +74,4 @@ class List extends Component {
   }
 }
 
-export default List;
+export default Trainees;

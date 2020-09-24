@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './result.scss';
+import './groups.scss';
 
-class Result extends Component {
+class Groups extends Component {
   render() {
     return (
       <div className='group-block'>
@@ -12,4 +12,4 @@ class Result extends Component {
   }
 }
 
-export default Result;
+export default Groups;
