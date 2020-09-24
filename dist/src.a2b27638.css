@@ -1,0 +1,45 @@
+.App {
+  width: 980px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f7f7f7; }
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(8, 120px);
+  grid-auto-rows: auto; }
+
+.personCard {
+  width: 100px;
+  height: 40px;
+  background-color: #eeeeee;
+  text-align: center;
+  line-height: 40px;
+  margin: 10px 20px; }
+
+input {
+  width: 98px;
+  height: 38px;
+  margin: 10px 20px;
+  padding: 0;
+  text-align: center; }
+
+.group-block {
+  display: flex;
+  justify-content: space-between; }
+
+button {
+  height: 40px;
+  width: 130px;
+  background-color: #ea5455;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  outline: none; }
+
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 14px; }
+
+
+/*# sourceMappingURL=/src.a2b27638.css.map */

@@ -1,0 +1,22 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(8, 120px);
+    grid-auto-rows: auto;
+}
+
+.personCard {
+    width: 100px;
+    height: 40px;
+    background-color: #eeeeee;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px 20px; 
+}
+
+input {
+    width: 98px;
+    height: 38px;
+    margin: 10px 20px;
+    padding: 0;
+    text-align: center;
+}
